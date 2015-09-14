@@ -1,0 +1,1 @@
+git log --color --date=short --pretty=format:'%C(bold yellow)%h %Creset %ad %C(white)%s%Creset%C(auto)%d [%an]' --grep='$1'  | cut -c 8-15 | pbcopy
