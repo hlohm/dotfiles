@@ -1,0 +1,57 @@
+
+# Aliases
+
+# Changing/making/removing directory
+alias -g ...='../..'
+alias -g ....='../../..'
+alias -g .....='../../../..'
+alias -g ......='../../../../..'
+
+alias 1='cd -'
+alias 2='cd -2'
+alias 3='cd -3'
+alias 4='cd -4'
+alias 5='cd -5'
+alias 6='cd -6'
+alias 7='cd -7'
+alias 8='cd -8'
+alias 9='cd -9'
+
+alias md='mkdir -p'
+alias rd=rmdir
+alias d='dirs -v | head -10'
+
+# List directory contents
+alias lsa='ls -lah'
+alias l='ls -lh'
+alias ll='ls -lah'
+alias la='ls -lAh'
+
+# Push and pop directories on directory stack
+alias pu='pushd'
+alias po='popd'
+
+# more aliases
+alias h="history"
+alias c="clear"
+
+alias zrc="vim ~/.zshrc"
+alias szrc=" source ~/.zshrc"
+alias tree="tree -C"
+alias gsha="git log -n 1 --pretty=format:"%H" | pbcopy"
+
+alias tma='tmux attach -d -t'
+alias git-tmux='tmux new -s $(basename $(pwd))'
+
+alias grep='grep --color'
+
+# Command line head / tail shortcuts
+alias -g H='| head'
+alias -g T='| tail'
+alias -g G='| grep'
+alias -g L="| less"
+alias -g M="| most"
+
+# quicksearch
+alias fd='find . -type d -name'
+alias ff='find . -type f -name'

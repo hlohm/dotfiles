@@ -1,0 +1,43 @@
+# hjkl movements in selection mode
+setw -g mode-keys vi
+
+# Remap pane navigation and resizing to vim
+unbind-key j
+bind-key j select-pane -D
+unbind-key k
+bind-key k select-pane -U
+unbind-key h
+bind-key h select-pane -L
+unbind-key l
+bind-key l select-pane -R
+
+bind H resize-pane -L 5
+bind J resize-pane -D 5
+bind K resize-pane -U 5
+bind L resize-pane -R 5
+
+# Set reload key to r
+bind r source-file ~/.tmux.conf
+
+# set color
+set -g default-terminal "screen-256color"
+
+# use unicode
+setw -g utf8 on
+set-option -g status-utf8 on
+
+# start window numering with 1
+set -g base-index 1
+
+# bind fast session switching
+unbind S
+bind S command-prompt "switch -t %1"
+
+# listen to alarms from all windows
+set -g bell-action any
+
+# start powerline daemon
+run-shell "powerline-daemon -q"	#already starting /w zsh
+
+# load powerline
+source "/usr/local/lib/python2.7/dist-packages/powerline/bindings/tmux/powerline.conf"
